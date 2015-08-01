@@ -1,13 +1,13 @@
-/** {
+* {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
-}*/
+}
 
 /* Framework */
-/*.grid {
+.grid {
   margin: 0 auto;
   max-width: 75em;
   width: 100%;
@@ -18,368 +18,17 @@
   margin-bottom: 1em;
   display: flex;
   flex-wrap: wrap;
-}*/
-
-/* TODO Fix rough transitions and col-6 overlap in header */
-
-/*.col-1, 
-.col-2, 
-.col-3, 
-.col-4, 
-.col-5, 
-.col-7, 
-.col-8, 
-.col-9, 
-.col-10, 
-.col-11, 
-.col-12 {
-  width: 100%;
-  -webkit-transition: width 0.5s;
-  transition: width 0.5s;
-}*/
-
-/*.col-6 {
-  width: 50%;
-  -webkit-transition: width 0.5s;
-  transition: width 0.5s;
-}*/
-
-/*@media screen and (max-width: 480px) {
-  h1, 
-  h2 {
-    font-size: 1.25em;
-    -webkit-transition: font-size 0.5s;
-    transition: font-size 0.5s;
-  }*/
-
-/*  .logo {
-    width: 64px;
-    height:64px;
-    -webkit-transition: height 0.5s;
-    transition: height 0.5s;
-    -webkit-transition: width 0.5s;
-    transition: width 0.5s;
-  }
-}*/
-
-/*@media screen and (min-width: 600px) {
-  .col-4 {
-    width: 50%;
-    -webkit-transition: width 0.5s;
-    transition: width 0.5s;
-  }
-}*/
-
-/*@media screen and (min-width: 1200px) {
-  .col-1 {
-    width: 8.33%;
-  }
-
-  .col-2 {
-    width: 16.66%;
-  }
-
-  .col-3 {
-    width: 25%;
-  }
-
-  .col-4 {
-    width: 33.33%;
-  }
-
-  .col-5 {
-    width: 41.66%;
-  }*/
-
-/*  .col-6 {
-    width: 50%;
-    -webkit-transition: width 0.5s;
-    transition: width 0.5s;
-  }
-
-  .col-7 {
-    width: 58.33%;
-  }
-
-  .col-8 {
-    width: 66.66%;
-  }
-
-  .col-9 {
-    width: 75%;
-  }
-
-  .col-10 {
-    width: 83.33%;
-  }
-
-  .col-11 {
-    width: 91.66%;
-  }
-
-  .col-12 {
-    width: 100%;
-  }
-}*/
-
-
-/**/
-
-
-
-
-
-
-
-
-
-
-/* Mobile Generic
-*******************************************************************************
-*/
-
-/* Typography */
-body {
-  color:#666;
-  font-family:'Ubuntu', Arial, Helvetica, sans-serif; 
-  font-size:1em;
-  line-height:1.4em; 
-  font-weight:normal;
-}
-h1, h2, h3 {
-  font-weight:normal;
-  font-family:'Droid Serif', Arial, Helvetica, sans-serif; 
-  line-height:1.5em;
-  margin:.45em 0;
-  padding:0;
-} 
-
-/* Links TODO Make it have cool colors on hover and stuff*/  
-a,
-a:visited,
-a:active,
-a:hover {color:#0099ff;}
-a:hover{ text-decoration:none;}
-
-/* Box sizing */
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
-/* Structure */   
-.wrapper {
-  width: 100%; 
-  margin: 0 auto;
-}
-header { 
-  padding:15px 0;
-}
-#banner { 
-  text-align:center;
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: #ff00b4;
 }
 
-/* TODO Add hero and stuff from basic.html*/
-#hero,
-#page-header {
-  background:#f3f3f3;
-  border-top:1px solid #e2e2e2;
-  border-bottom:1px solid #e2e2e2;
-  padding:20px 0;
+::selection {
+    color: white;
+    background: #ff00b4;
 }
-#hero h1 { 
-  line-height:1.2em;
-  margin-top:0px;
-  margin-bottom:10px;}
-
-/* TODO add flexslider */
-.flexslider {
-  display:none;
-}
-
-#content {  
-  margin:40px 0;
-  padding: 1em;
-}
-
-aside { 
-  margin:40px 0;
-}
-
-p {
-  margin:0 0 1.5em;
-}
-
-
-/* Responsive images */
-img {
-  max-width:100%; height:auto;
-}
-
-/*Main Menu*/
-.menu-toggle {
-  display:block;
-  padding:10px;
-  margin:20px 0 0;
-  background:#666;
-  color:#fff;
-  cursor:pointer;
-  text-transform:uppercase;
-  font-size:20px;
-}
-.menu-toggle.toggled-on {
-  background:#0099ff;
-}
-.srt-menu {
-  display:none;
-} 
-.srt-menu.toggled-on {
-  display:block;
-  position:relative;
-  z-index:10;
-}
-
-.srt-menu {
-  clear:both;
-  margin-bottom:60px;
-  
-}
-.srt-menu li a {
-  background:#dadada;
-  display:block;
-  margin:1px 0; 
-  padding:10px;
-  text-decoration:none;
-}
-.srt-menu li a:hover {
-  background:#0099ff;
-  color:#fff;
-}
-.srt-menu li li a {
-  background:#e8e8e8;
-  padding-left:40px;
-}
-.srt-menu li li li a {
-  background:#efefef;
-  padding-left:80px;
-}
-
-/*Secondary Menu*/
-#secondary-navigation {
-  margin-bottom:60px;
-}
-#secondary-navigation ul {
-  margin:0;
-  padding:0;
-}
-#secondary-navigation ul li a { 
-  background:#E6E6E6;
-  display:block;
-  margin:5px 0; 
-  padding:10px;
-  text-decoration:none;
-}
-#secondary-navigation ul li a:hover,
-#secondary-navigation ul li.current a {
-  background:#0099ff;
-  color:#fff;
-}
-
-/*
-LARGER MOBILE DEVICES
-This is for mobile devices with a bit larger screens.
-*/
-/*@media only screen and (min-width: 481px) {
-#banner{
-  float:left;
-  text-align:left;
-  margin-bottom:-20px;
-}
-.menu-toggle{
-  margin-top:10px; 
-  float:right;
-}
-
-}
-*/
-/*
-TABLET & SMALLER LAPTOPS
-The average viewing window and preferred media query for those is 768px.
-But I think that some more breathing space is good:)
-*/
-/*@media only screen and (min-width: 920px) {
-
-.wrapper{
-  max-width: 1200px; 
-  margin: .75em auto;
-}
-
-#banner{ 
-  float:left; 
-  text-align:left;
-  margin-bottom:0px;
-}
-header{
-  padding:0;
-}
-#content {  
-  float:left;
-  width:65%;
-}
-#content.wide-content{
-  float:none;
-  width:100%;
-}
-
-aside { 
-  float:right;
-  width:30%;
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*body,
-div,
-ul,
-li,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  padding:0;
-  margin:0;
-  font-family: "Roboto", sans-serif;
-}*/
 
 .clear-fix {
   overflow: auto;
@@ -391,43 +40,12 @@ h6 {
   padding: 0 5%;
 }
 
-/*h1 {
-  font-size: 40px;
-  color: #f5a623;
-  line-height: 48px;
-  display: inline;
-}*/
-
-/*h2 {
-  font-weight: bold;
-  font-size: 24px;
-  color: #999;
-  line-height: 29px;
-  padding: 10px;
+#workExperience,
+#projects,
+#education,
+#map-div {
+  padding: 1em;
 }
-
-h3 {
-  font-style: italic;
-  font-size: 20px;
-  color: #000;
-  line-height: 22px;
-}
-
-h4 {
-  font-weight: bold;
-  font-size: 14px;
-  color: #4a4a4a;
-  line-height: 17px;
-}
-
-h2,
-h3,
-h4,
-h5 {
-  padding:10px 5%;
-
-}*/
-
 
 .date-text {
   font-style: italic;
@@ -443,7 +61,6 @@ h5 {
   color: #999;
   line-height: 16px;
   float: right;
-
 }
 
 p {
@@ -452,6 +69,8 @@ p {
   line-height: 21px;
 }
 
+
+
 a {
   color: #1199c3;
   text-decoration: none;
@@ -459,24 +78,16 @@ a {
   display: block;
 }
 
-/*.welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #f3f3f3;
-  line-height: 28px;
-}*/
-
 #skills-h3 {
   color: #f5ae23;
-  display: none;
 }
 
-.orange {
-  background-color: #f5ae23;
+.blue {
+  background-color: #4f91d2;
 }
 
-.orange-text {
-  color: #f5ae23;
+.green-text {
+  color: #00b47b;
 }
 
 .white-text {
@@ -491,12 +102,23 @@ a {
 }
 
 .dark-gray {
-  background-color: #4a4a4a;
+  background-color: #3d424f;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #3d424f;
+}
+
+#header p {
+  color: white;
+}
+
+
+
+#name,
+#role {
+  color: white;
 }
 
 .flex-box {
@@ -519,13 +141,14 @@ ul {
 .biopic {
   float: left;
   padding: 10px;
-  width: 150px;
+  width: 300px;
   height: auto;
-  display: none;
 }
 
 img {
   padding: 10px;
+  max-width:100%; 
+  height:auto;
 }
 
 span {
@@ -535,11 +158,16 @@ span {
 #lets-connect {
   text-align: center;
   margin-top: 5%;
+  color: white;
+}
+
+#projects img {
+  max-width: 350px;
 }
 
 /* Media queries to handle various device widths */
 
-/*@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   #lets-connect {
     margin-top: 5%;
   }
@@ -553,15 +181,20 @@ span {
 
 @media only screen and (max-width: 750px) {
   #lets-connect {
-    margin-top: 10%;
+    margin-top: 20%;
   }
   .biopic {
     width: 150px;
+    display: none;
   }
   .welcome-message {
     display: none;
   }
-}*/
+}
+
+#footerContacts {
+  margin-bottom: 0;
+}
 
 #map {
   display: block;
@@ -576,58 +209,11 @@ span {
   padding-bottom: 2%;
 }
 
-/*@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 750px) {
   #skills-h3,
   .biopic {
     display: block;
+    margin: 0 auto;
+    clear: both;
   }
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*CSS additions*/
-/*#projects img {
-  max-width: 20em;
-  height: auto;
 }
-
-
-#workExperience,
-#projects,
-#education,
-#map-div {
-  margin: 0 auto;
-  max-width: 75em;
-  width: 100%;
-  padding: 2em;
-}
-*/
-
-
-

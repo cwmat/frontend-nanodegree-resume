@@ -1,17 +1,19 @@
  // Data members
  var bio = {
     "name": "Chaz Mateer",
-    "role": "GIS Analyst / Spaghettimancer",
+    "role": "GIS Analyst",
     "contacts": {
         "mobile": "703-336-2718",
         "email": "chaz.mateer@gmail.com",
-        "github": "www.github.com",
+        "github": "https://github.com/cwmat",
         "twitter": "@cwmat",
         "location": "Fredericksburg, Virginia"
     },
-    "picture": "images/chaz.jpg",
-    "welcome": 'Welcome to my "in no way serious" resume!  Seriously...  this is just a placeholder for now!',
-    "skills": ["geospatial analysis", "programming", "technical writing", "cartography"]
+    "picture": "https://media.licdn.com/media/p/5/000/207/3dd/0a2197b.jpg",
+    "welcome": "<p>Mr. Mateer is an analyst with (Company Name Removed), providing GIS analysis and research support for (Client Name Removed) projects and (Client Name Removed) communication strategies. Specifically, he focuses on applying GIS methodologies to map, analyze, and understand issues related to the environment and urban planning, as well as adding spatial functionality to stakeholder engagement strategies.</p>\
+    <p>Prior to joining (Company Name Removed), Mr. Mateer worked as a GIS technician intern at Prince William Forest National Park in the Resource Management department. He managed and maintained the parks geospatial datasets, conducted a full GPS inventory of trail features, and produced a number of cartographic products for park events, decision making, and navigation. Additionally, he worked on multiple research projects that utilized GIS analysis. Most notably, his construction of a habitat suitability model for American chestnut trees was used to plan the reintroduction of blight resistant chestnuts into the park.</p>\
+    <p>Mr. Mateer received his BS in environmental studies from Virginia Commonwealth University and has a certificate in GIS with a concentration in defense and intelligence from George Mason University.</p>",
+    "skills": ["images/geo.jpg", "images/prog.jpg", "images/write.jpg", "images/carto.jpg"]
 }
 
 var education = {
@@ -53,19 +55,19 @@ var education = {
 
 var work = {
     "jobs": [{
-        "employer": "Marstel-Day, LLC",
-        "title": "Intern",
-        "dates": "November 2012 - February 2013",
-        "location": "Fredericksburg, Virginia",
-        "description": "Brie monterey jack smelly cheese. Red leicester manchego manchego airedale cheese triangles halloumi chalk and cheese rubber cheese. Queso when the cheese comes out everybody's happy cheese strings cheddar parmesan danish fontina monterey jack gouda."
+        "employer": "Prince William National Forest",
+        "title": "GIS Technician Intern",
+        "dates": "May 2012 - September 2012",
+        "location": "Prince William, Virginia",
+        "description": "Edam paneer cheesy feet. Taleggio stilton cheese and biscuits melted cheese babybel halloumi red leicester croque monsieur. Melted cheese cut the cheese feta cheese triangles croque monsieur caerphilly melted cheese bavarian bergkase. Cheesy grin cheese strings bavarian bergkase bavarian bergkase manchego hard cheese airedale fromage frais. Fromage frais."
     }, {
-        "employer": "Marstel-Day, LLC",
+        "employer": "(Company Name Removed)",
         "title": "Researcher",
-        "dates": "February 2013 - June 2014",
+        "dates": "November 2012 - June 2014",
         "location": "Fredericksburg, Virginia",
-        "description": "Brie monterey jack smelly cheese. Red leicester manchego manchego airedale cheese triangles halloumi chalk and cheese rubber cheese. Queso when the cheese comes out everybody's happy cheese strings cheddar parmesan danish fontina monterey jack gouda."
+        "description": "Fondue cheese strings croque monsieur. Cheese and biscuits gouda pecorino stinking bishop cheese slices mascarpone ricotta everyone loves. Say cheese edam boursin red leicester gouda brie mozzarella cut the cheese. Cheeseburger smelly cheese when the cheese comes out everybody's happy parmesan parmesan st. agur blue cheese."
     }, {
-        "employer": "Marstel-Day, LLC",
+        "employer": "(Company Name Removed)",
         "title": "Analyst",
         "dates": "June 2014 - Current",
         "location": "Fredericksburg, Virginia",
@@ -75,23 +77,23 @@ var work = {
 
 var projects = {
     "projects": [{
-        "title": "Moopster",
+        "title": "John Snow Mapping Demo",
         "dates": "2015",
-        "description": "Brie monterey jack smelly cheese. Red leicester manchego manchego airedale cheese triangles halloumi chalk and cheese rubber cheese. Queso when the cheese comes out everybody's happy cheese strings cheddar parmesan danish fontina monterey jack gouda.",
+        "description": "The Broad Street cholera outbreak was a severe outbreak of cholera that occurred near Broad Street in Soho district of London, England in 1854. This outbreak is best known for the physician John Snow's study of the outbreak and his discovery that cholera is spread by contaminated water. This discovery came to influence public health and the construction of improved sanitation facilities beginning in the 19th century. Later, the term 'focus of infection' would be used to describe places like the Broad Street pump in which conditions are ripe for transmission of an infection.",
         "images": [
-            "images/moops.jpg",
-            "images/moops.jpg",
-            "images/moops.jpg"
+            "images/john_snow1.jpg",
+            "images/john_snow2.jpg",
+            "images/john_snow3.jpg"
         ]
     },
     {
-        "title": "Spaghetti",
+        "title": "Tour of my favorite places in RVA",
         "dates": "2015",
-        "description": "Brie monterey jack smelly cheese. Red leicester manchego manchego airedale cheese triangles halloumi chalk and cheese rubber cheese. Queso when the cheese comes out everybody's happy cheese strings cheddar parmesan danish fontina monterey jack gouda.",
+        "description": "Richmond is the capital of the Commonwealth of Virginia, in the United States. It is the center of the Richmond Metropolitan Statistical Area (MSA) and the Greater Richmond Region; since 1871 Richmond has been an independent city.  As of the 2010 census, the population was 204,214; in 2014, the population was estimated to be 217,853, the fourth-most populous city in Virginia. The Richmond Metropolitan Area has a population of 1,260,029.",
         "images": [
-            "images/spaghetti.jpg",
-            "images/spaghetti.jpg",
-            "images/spaghetti.jpg"
+            "images/richmond_1.jpg",
+            "images/richmond_2.jpg",
+            "images/richmond_3.jpg"
         ]
     }]
 }
@@ -143,10 +145,9 @@ bio.display = function() {
   $("#header").append(formattedBioPic);
   var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", this.welcome)
   $('#header').append(formattedWelcomeMsg);
-  $('#header').append(HTMLskillsStart);
   for (var skill in this.skills) {
-    var formattedSkill = replaceData(HTMLskills, this.skills[skill]);
-    $("#header").append(formattedSkill);
+    var formattedSkill = replaceData(HTMLslickyEntry, this.skills[skill]);
+    $(".slicky").append(formattedSkill);
   }
   // Footer contacts
   $('#footerContacts').append(formattedMobile);
@@ -199,12 +200,40 @@ education.display = function() {
 }
 
 // Click function
-// $(document).click(function(loc) {
-//   var x = loc.pageX;
-//   var y = loc.pageY;
+$(document).click(function(loc) {
+  var x = loc.pageX;
+  var y = loc.pageY;
 
-//   logClicks(x ,y);
-// });
+  logClicks(x ,y);
+});
+
+// Slick carosel
+$(document).ready(function(){
+  $('.slicky').slick({
+      centerMode: true,
+      centerPadding: '60px',
+      slidesToShow: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: false,
+      responsive : [
+        {
+          breakpoint: 750,
+          settings: {
+            centerPadding: '40px',
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 550,
+          settings: {
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+});
 
 // Map
 $('#map-div').append(googleMap);

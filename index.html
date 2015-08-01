@@ -29,6 +29,8 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <!-- Load the page styles. -->
   <link href='http://fonts.googleapis.com/css?family=Droid+Serif|Ubuntu' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
   <link href="css/style.css" rel="stylesheet">
 
   <!--
@@ -59,7 +61,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 </head>
 <body>
-  <div id="main" class="wrapper">
+  <div id="main" class="grid">
     <!--
     Everything from here to the <script> tag below is the skeleton of your
     website. Your code will add information to each of the sections of the
@@ -68,46 +70,13 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     -->
     <div id="header" class="center-content clear-fix">
       <ul id="topContacts" class="flex-box"></ul>
-      <!-- main navigation -->
-        <nav id="topnav" role="navigation">
-        <div class="menu-toggle">Menu</div>  
-          <ul class="srt-menu" id="menu-main-navigation">
-            <li><a href="basic.html">Home page</a></li>
-            <li class="current"><a href="basic-internal.html">Internal page demo</a></li>
-      <li><a href="#">menu item 3</a>
-        <ul>
-          <li>
-            <a href="#">menu item 3.1</a>
-          </li>
-          <li class="current">
-            <a href="#">menu item 3.2</a>
-            <ul>
-              <li class="current"><a href="#">menu item 3.2.1</a></li>
-              <li><a href="#">menu item 3.2.2 with longer link name</a></li>
-              <li><a href="#">menu item 3.2.3</a></li>
-              <li><a href="#">menu item 3.2.4</a></li>
-              <li><a href="#">menu item 3.2.5</a></li>
-            </ul>
-          </li>
-          <li><a href="#">menu item 3.3</a></li>
-          <li><a href="#">menu item 3.4</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">menu item 4</a>
-        <ul>
-          <li><a href="#">menu item 4.1</a></li>
-          <li><a href="#">menu item 4.2</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">menu item 5</a>
-      </li> 
-    </ul>     
-    </nav><!-- #topnav -->
     </div>
     <div id="content">
       <div style="clear: both;"></div>
+        <div id="skills">
+        <h2>Skills at a Glance</h2>
+        <div class="slicky"></div>
+      </div>
       <div id="workExperience" class="gray">
         <h2>Work Experience</h2>
       </div>
@@ -121,23 +90,9 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
         <h2>Where I've Lived and Worked</h2>
       </div>
     </div>
-    <!-- sidebar -->    
-    <aside>
-        <h2>Secondary Section menu</h2>
-            <nav id="secondary-navigation">
-                    <ul>
-                        <li><a href="#">menu item</a></li>
-                        <li class="current"><a href="#">current menu item</a></li>
-                        <li><a href="#">menu item</a></li>
-                        <li><a href="#">menu item</a></li>
-                        <li><a href="#">menu item</a></li>
-                    </ul>
-             </nav>
-      </aside><!-- #end sidebar -->
-   
-  </div><!-- #end div #main .wrapper -->
+  </div>
     <div id="lets-connect" class="dark-gray">
-      <h2 class="orange center-text">Let's Connect</h2>
+      <h2 class="blue center-text">Let's Connect</h2>
         <ul id="footerContacts" class="flex-box">
       </ul>
     </div>
@@ -148,7 +103,9 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   writing. In resumeBuilder.js, you'll be writing code that builds the resume
   dynamically when this website, index.html, is opened.
   -->
+  <script type="text/javascript" src="slick/slick.min.js"></script>
   <script src="js/resumeBuilder.js"></script>
+
 
 
   <!--
@@ -196,5 +153,13 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     //   document.getElementById('map-div').style.display = 'none';
     // }
   </script>
+<!-- Image Source:
+https://cdn.datafloq.com/blog_pictures/geospatial-data-enrich-customer-experience-drive-revenue.jpg
+http://cdn.skilledup.com/wp-content/uploads/2015/01/Python-programming-Feature_1290x688_MS.jpg
+http://atlassian.wpengine.netdna-cdn.com/confluence/content-flow.jpg
+http://www.davidrumsey.com/rumsey/Size4/D5005/0702032.jpg
+https://upload.wikimedia.org/wikipedia/commons/c/cb/John_Snow_memorial_and_pub.jpg
+http://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2013/3/14/1363295337709/johnsnowillustration.png?w=620&q=85&auto=format&sharp=10&s=9fd2776a511282e0052e6d2b9d8ff3a8
+ -->
 </body>
 </html>
